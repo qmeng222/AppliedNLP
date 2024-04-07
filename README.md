@@ -1,25 +1,27 @@
-# Applied NLP Course
+# Applied NLP
 
-This repository contains the code and materials for the Applied NLP course.
+## Overview:
 
-## Course Description
+- Description: Understand and practice Generative AI, prompt-engineering, HuggingFace models implementation, LLMs, vector databases, Retrieval-Augmented Generation (RAG), and more.
+- Tech stack: PyTorch, scikit-learn
+- Demo:
+  ![project demo](images/abc.gif)
 
-This course is designed to provide a comprehensive introduction to natural language processing (NLP). The course will cover how to apply NLP to extract insights from text data and how to build predictive models using text data. The course will cover the following topics:
+## Setup:
 
-- Introduction to NLP
+1. (For project isolation) create & activate a virtual environment (dependencies are installed within the virtual environment other than system-wide & all subsequent steps will be performed within the virtual environment):
 
-- Apply Pre-Trained Models
+```
+python -m venv venv
+source venv/bin/activate
+```
 
-- Model Fine-Tuning
+2. Upgrade the pip package manager to the latest version within the current Python environment: `python -m pip install --upgrade pip`
+3. Install Python dependencies listed in a `requirements.txt` file: `pip install -r requirements.txt`
+4. Install the openpyxl package for working with Excel files: `pip install openpyxl`
+5. Update the `requirements.txt` file: `pip freeze > requirements.txt`, so others can install all the packages and their respective versions specified in the requirements.txt file.
 
-- Vector Databases
+## Resources:
 
-- Retrieval-Augmented-Generation
-
-- OpenAI
-
--Open Source LLMs
-
-- Prompt Engineering
-
-- Data Augmentation
+1. [Source code](https://github.com/DataScienceHamburg/AppliedNLPMaterial)
+2. [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
