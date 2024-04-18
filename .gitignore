@@ -8,6 +8,7 @@ db/
 *.pptx
 
 # large files
+**/.vector_cache/
 *.pkl
 *.gguf
 glove.6B.100d.txt
