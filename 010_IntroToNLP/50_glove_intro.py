@@ -51,16 +51,17 @@ def get_closest_words_from_embedding(word_emb, max_n=5):
    return dist_sort_filt
 
 
-# %% find word analogies
-# e.g. King is to Queen like Man is to Woman
+# %% perform word analogy using word embeddings:
+# e.g. King: Queen <-> Man: Woman
 def get_word_analogy(word1, word2, word3, max_n=5):
    # logic w1= king, ...
-   # w1 - w2 + w3 --> w4
+   # w2 - w1 = w4 - w3 -> w4 = w2 - w1 + w3
    word1_emb = get_embedding_vector(word1)
    word2_emb = get_embedding_vector(word2)
    word3_emb = get_embedding_vector(word3)
-   word4_emb = word1_emb - word2_emb + word3_emb
+   word4_emb = word2_emb - word1_emb + word3_emb
    analogy = get_closest_words_from_embedding(word4_emb)
    return analogy
 
-get_word_analogy(word1='sister', word2='brother', word3='nephew')
+get_word_analogy(word1='sister', word2='brother', word3='niece')
+
