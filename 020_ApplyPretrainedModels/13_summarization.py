@@ -1,7 +1,6 @@
 #%% packages
 from transformers import pipeline
 
-
 #%% Text Summarization
 pipe = pipeline("summarization", model="Falconsai/text_summarization")
 
@@ -21,6 +20,10 @@ In February 2023, the company announced partnership with Amazon Web Services (AW
 
 In August 2023, the company announced that it raised $235 million in a Series D funding, at a $4.5 billion valuation. The funding was led by Salesforce, and notable participation came from Google, Amazon, Nvidia, AMD, Intel, IBM, and Qualcomm.[12]
 """
+
+# specify the min/max length of the output text:
 pipe(article, min_length=5, max_length=20)
+
+# [{'summary_text': 'Hugging Face was founded in 2016 by French entrepreneurs Clément Delangue, Julien Chau'}]
 
 # %%
