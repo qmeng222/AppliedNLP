@@ -4,6 +4,7 @@ from transformers import pipeline
 #%% Text Summarization
 pipe = pipeline("summarization", model="Falconsai/text_summarization")
 
+# triple-quoted string (a multi-line string literal):
 article = """The company was founded in 2016 by French entrepreneurs Clément Delangue, Julien Chaumond, and Thomas Wolf in New York City, originally as a company that developed a chatbot app targeted at teenagers.[1] The company was named after the "hugging face" emoji.[1] After open sourcing the model behind the chatbot, the company pivoted to focus on being a platform for machine learning.
 
 In March 2021, Hugging Face raised US$40 million in a Series B funding round.[2]
