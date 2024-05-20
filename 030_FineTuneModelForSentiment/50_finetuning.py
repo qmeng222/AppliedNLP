@@ -48,11 +48,11 @@ training_args = TrainingArguments(
     log_level='error',
     weight_decay=0.01,               # strength of weight decay
     logging_dir='./logs',            # directory for storing logs
-    
+
 )
 #%% Trainer
-trainer = Trainer(model=model, 
-                  args=training_args, 
+trainer = Trainer(model=model,
+                  args=training_args,
                   train_dataset=yelp_ds_dict['train'], eval_dataset=yelp_ds_dict['test'])
 trainer.train()
 
