@@ -16,8 +16,7 @@
    ```
 2. Upgrade the pip package manager to the latest version within the current Python environment: `python -m pip install --upgrade pip`
 3. Install Python dependencies listed in a `requirements.txt` file: `pip install -r requirements.txt`
-4. Install the openpyxl package for working with Excel files: `pip install openpyxl`
-5. Update the `requirements.txt` file: `pip freeze > requirements.txt`, so others can install all the packages and their respective versions specified in the requirements.txt file.
+4. (If necessary) Update the `requirements.txt` file: `pip freeze > requirements.txt`, so others can install all the packages and their respective versions specified in the requirements.txt file.
 
 ## Resources:
 
