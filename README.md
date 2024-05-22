@@ -22,5 +22,6 @@
 ## Resources:
 
 1. [Source code](https://github.com/DataScienceHamburg/AppliedNLPMaterial)
-2. [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+2. [Additional dataset](https://drive.google.com/drive/folders/1Jgbz34hBauln6t6rv9JBdZ7mkdcytcdo)
 3. [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+4. [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)

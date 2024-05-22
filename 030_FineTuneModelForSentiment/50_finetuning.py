@@ -1,3 +1,6 @@
+#%%
+print("PY")
+
 #%% packages
 from transformers import AutoModelForSequenceClassification, DistilBertTokenizer, Trainer, TrainingArguments
 from datasets import DatasetDict
