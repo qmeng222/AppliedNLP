@@ -12,6 +12,7 @@ datasets==2.19.1
 debugpy==1.8.1
 decorator==5.1.1
 dill==0.3.8
+et-xmlfile==1.1.0
 executing==2.0.1
 filelock==3.14.0
 fonttools==4.51.0
@@ -36,6 +37,7 @@ multiprocess==0.70.16
 nest-asyncio==1.6.0
 networkx==3.3
 numpy==1.26.4
+openpyxl==3.1.2
 packaging==24.0
 pandas==2.2.2
 parso==0.8.4
