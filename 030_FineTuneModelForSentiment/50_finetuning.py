@@ -13,8 +13,9 @@ from sklearn.dummy import DummyClassifier
 # %% YELP Dataset
 # source: https://huggingface.co/datasets/yelp_review_full/viewer/yelp_review_full/train?f%5blabel%5d%5bvalue%5d=0
 
+
 #%%  dataset
-yelp_hidden_states = joblib.load('model/yelp_hidden_states.joblib')
+yelp_hidden_states = joblib.load('../data/yelp_hidden_states.joblib')
 
 #%% Model and Tokenizer
 model_name = 'distilbert-base-uncased'
@@ -24,8 +25,8 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name, num_label
 tokenizer = DistilBertTokenizer.from_pretrained(model_name)
 
 #%% Dataset
-train_ds = yelp_hidden_states.select(range(0, 800))
-eval_ds = yelp_hidden_states.select(range(800, 1000))
+train_ds = yelp_hidden_states.select(range(0, 800)) # 800 for training
+eval_ds = yelp_hidden_states.select(range(800, 1000)) # last 200 for evaluation
 print(train_ds[0]['input_ids'].shape)
 print(eval_ds[0]['input_ids'].shape)
 print(yelp_hidden_states[800]['input_ids'].shape)
