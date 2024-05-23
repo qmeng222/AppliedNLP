@@ -64,7 +64,7 @@ print(f"Total # of tokens: {len(text_tokens)}") # 5363
 
 # %% Check the token length
 # reference: model card "By default, input text longer than 256 word pieces is truncated."
-max_token_length(text_tokens)  # 216 tokens
+max_token_length(text_tokens)  # 216 tokens, didn't exceed the model limit
 
 # %%
 embedding_fn = SentenceTransformerEmbeddingFunction(
@@ -76,11 +76,18 @@ embedding_fn = SentenceTransformerEmbeddingFunction(
 len(embedding_fn(text_tokens[0])[0]) # 384
 
 # %% initialize chromadb
-
+chroma_db = chromadb.Client()
+chroma_collection = chroma_db.create_collection("bible", embedding_function=embedding_fn)
 
 # %% add all tokens to collection
+ids = [str(uuid4()) for _ in range(len(text_tokens))]
+ids[:5]
 
+#%%
+chroma_collection.add(documents=text_tokens, ids=ids)
 
-# %% Save the chroma collection
-# %% Run a Query
+# %% Run a query:
+res = chroma_collection.query(query_texts=["What did Noah do?"], n_results=10)
+res["documents"]
+
 # %%
