@@ -40,19 +40,40 @@ print(lorem_ipsum_token)
 max_token_length(lorem_ipsum_token) # less than 256
 
 # %% Real Implemetation for large corpus (Bible)
-
 # %% sneak peak of the text
+text_path = "../data/bible.txt"
+with open(text_path, "r", encoding="utf-8") as f:
+    text_raw = f.read()
+
+text_raw[:1000]
 
 # %% Character splitter
+character_splitter = RecursiveCharacterTextSplitter(
+    separators=['\n    \n', '\n\n', '\n', '. '],
+    chunk_size=1000,
+    chunk_overlap=0
+)
 
+text_splitted = character_splitter.split_text(text_raw) # list of strings
+print(f"Total # of splitted chunks: {len(text_splitted)}") # 4986
+
+text_tokens = []
+for text in text_splitted:
+    text_tokens.extend(token_splitter.split_text(text))
+print(f"Total # of tokens: {len(text_tokens)}") # 5363
 
 # %% Check the token length
 # reference: model card "By default, input text longer than 256 word pieces is truncated."
+max_token_length(text_tokens)  # 216 tokens
 
 # %%
+embedding_fn = SentenceTransformerEmbeddingFunction(
+    model_name="all-MiniLM-L6-v2",
+    device="cpu"
+)
 
 # %% Size of embedding vector
-
+len(embedding_fn(text_tokens[0])[0]) # 384
 
 # %% initialize chromadb
 
