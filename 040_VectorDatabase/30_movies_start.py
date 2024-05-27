@@ -26,7 +26,8 @@ token_splitter = SentenceTransformersTokenTextSplitter(
     chunk_overlap=0
 )
 
-# %% Data Import
+# %% Movies Data Import
+# https://www.kaggle.com/datasets
 
 #%% filter movies for missing title or overwiew
 

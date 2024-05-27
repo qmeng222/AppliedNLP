@@ -40,6 +40,7 @@ print(lorem_ipsum_token)
 max_token_length(lorem_ipsum_token) # less than 256
 
 # %% Real Implemetation for large corpus (Bible)
+# https://www.gutenberg.org/cache/epub/10/pg10.txt
 # %% sneak peak of the text
 text_path = "../data/bible.txt"
 with open(text_path, "r", encoding="utf-8") as f:
