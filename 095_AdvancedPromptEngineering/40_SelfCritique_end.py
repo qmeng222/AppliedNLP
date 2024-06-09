@@ -1,9 +1,10 @@
-#%% packages
+# %% packages
 # related to: https://medium.com/@cobusgreyling/self-critique-llm-chain-using-langchain-smartllmchain-d67c42a4fa83
 # run pip install langchain_experimental
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain_experimental.smart_llm import SmartLLMChain
+
 # %% import SmartLLMChain
 # %%
 hard_question = "If it takes 5 workers 8 days to build a house, how long would it take 10 workers to build the same house?"
